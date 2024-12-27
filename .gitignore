@@ -1,0 +1,11 @@
+# python
+**/__pycache__/
+/.vscode/
+/.venv/
+/.pytest_cache/
+/.env/
+/tmp/
+.idea/
+*.iml
+.cache/
+data/
