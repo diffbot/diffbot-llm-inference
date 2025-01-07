@@ -5,9 +5,13 @@ import uvicorn
 import pytest
 from openai import OpenAI
 import os
-
+import sys
 
 DIFFBOT_TOKEN = os.environ.get("DIFFBOT_TOKEN", "")
+
+if not DIFFBOT_TOKEN:
+    print("Set DIFFBOT_TOKEN environment variable before running tests.")
+    sys.exit(1)
 
 class Server(uvicorn.Server):
     def install_signal_handlers(self):
