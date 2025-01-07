@@ -109,6 +109,7 @@ Model: diffbot-small-xl
 docker run --runtime nvidia --gpus all -p 8001:8001 --ipc=host -e VLLM_OPTIONS="--model diffbot/Llama-3.3-Diffbot-Small-XL-2412 --served-model-name diffbot-small --enable-prefix-caching --max-model-len 32768"  docker.io/diffbot/diffbot-llm-inference:latest 
 ```
 
+You can now use the endpoint `http://localhost:8001/rag/v1`. It works exactly like the Serverless API below.
 
 ## 7. Using the Serverless API
 
