@@ -115,7 +115,7 @@ client = OpenAI(
 )
 
 completion = client.chat.completions.create(
-    model="diffbot-xl-small",
+    model="diffbot-small-xl",
     temperature=0,
     messages=[
         {
