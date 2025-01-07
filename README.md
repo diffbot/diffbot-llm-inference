@@ -100,7 +100,7 @@ Using Docker image and models in huggingface
 This might take a few minutes.**
 
 ```bash
-docker run --runtime nvidia --gpus all -p 8001:8001 --ipc=host -e VLLM_OPTIONS="--model diffbot/Llama-3.1-Diffbot-Small-2412 --served-model-name diffbot-small --enable-prefix-caching"  docker.io/diffbot/diffbot-llm-inference:latest 
+docker run --runtime nvidia --gpus all -p 8001:8001 --ipc=host -e VLLM_OPTIONS="--model diffbot/Llama-3.1-Diffbot-Small-2412 --served-model-name diffbot-small --enable-prefix-caching --max-model-len 32768"  docker.io/diffbot/diffbot-llm-inference:latest 
 ```
 ## 7. Using the Serverless API
 
