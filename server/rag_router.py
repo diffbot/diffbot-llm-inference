@@ -87,6 +87,11 @@ def supported_models():
             "id": ModelID.DIFFBOT_SMALL,
             "object": "model",
             "owned_by": "diffbot"
+        },
+        {
+            "id": ModelID.DIFFBOT_SMALL_XL,
+            "object": "model",
+            "owned_by": "diffbot"
         }
         ]
     body = {

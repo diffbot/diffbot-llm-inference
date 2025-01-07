@@ -14,7 +14,7 @@ from server.log import get_logstash_logger
 logger = get_logstash_logger("openai_gpt")
 
 class OpenAIModel(LLM):
-    supported_model = {ModelID.DIFFBOT_SMALL}
+    supported_model = {ModelID.DIFFBOT_SMALL, ModelID.DIFFBOT_SMALL_XL}
     diffbot_client = AsyncOpenAI(
         api_key="EMPTY",
         base_url=get_config().get_vllm_server_url()+"/v1",
@@ -55,9 +55,8 @@ class OpenAIModel(LLM):
             request_globals.usage[request_new['model']] = CompletionUsage()
         curr_usage = request_globals.usage[request_new['model']]
 
-        if request_new['model'] == ModelID.DIFFBOT_SMALL:
+        if request_new['model'] == ModelID.DIFFBOT_SMALL or request_new['model'] == ModelID.DIFFBOT_SMALL_XL:
             client = self.diffbot_client
-            request_new['model'] = 'fine-tuned'
 
             # VLLM errs with these unnecessary fields, remove them
             request_new.pop('tools', None)

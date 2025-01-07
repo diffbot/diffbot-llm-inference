@@ -18,6 +18,7 @@ LAST_TOOL_TOKENS_LIMIT = 6000 # limit on tokens to use for last tool response. s
 
 class ModelID(str, Enum):
     DIFFBOT_SMALL = 'diffbot-small'
+    DIFFBOT_SMALL_XL = 'diffbot-small-xl'
     UNKNOWN = 'unknown'
 
     @classmethod
@@ -39,7 +40,13 @@ LLMS = {
         model=ModelID.DIFFBOT_SMALL,
         tokenLimit=131072,
     ),
+    ModelID.DIFFBOT_SMALL_XL: ModelInfo(
+        id=ModelID.DIFFBOT_SMALL_XL,
+        model=ModelID.DIFFBOT_SMALL_XL,
+        tokenLimit=131072,
+    ),
 }
+
 
 # # Chat related data structures.
 class Role(str, Enum):

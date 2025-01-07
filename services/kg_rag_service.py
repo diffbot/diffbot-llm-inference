@@ -12,7 +12,7 @@ class KgRagService:
     Service to rag against Diffbot Knowledge Graph.
     """
     def __init__(self) -> None:
-        self.diffbot_models = {ModelID.DIFFBOT_SMALL}
+        self.diffbot_models = {ModelID.DIFFBOT_SMALL, ModelID.DIFFBOT_SMALL_XL}
 
     @classmethod
     def get_llm(cls, model_id: ModelID) -> LLM:

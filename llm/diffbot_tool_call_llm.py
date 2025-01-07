@@ -27,7 +27,7 @@ def contains_url(query):
 
 
 class DiffbotToolCallLLM(ToolCallLLM):
-    supported_models = {ModelID.DIFFBOT_SMALL}
+    supported_models = {ModelID.DIFFBOT_SMALL, ModelID.DIFFBOT_SMALL_XL}
 
     def __init__(self):
         super().__init__()

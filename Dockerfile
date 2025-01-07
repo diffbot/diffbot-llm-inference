@@ -15,6 +15,7 @@ WORKDIR /code
 
 # Install requirements
 RUN pip install poetry
+RUN pip install poetry-plugin-export
 RUN pip install pyasynchat # required by supervisord
 RUN poetry env use python3.10
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
