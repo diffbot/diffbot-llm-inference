@@ -104,12 +104,18 @@ Model: diffbot-small
 docker run --runtime nvidia --gpus all -p 8001:8001 --ipc=host -e VLLM_OPTIONS="--model diffbot/Llama-3.1-Diffbot-Small-2412 --served-model-name diffbot-small --enable-prefix-caching"  docker.io/diffbot/diffbot-llm-inference:latest 
 ```
 
-Model: diffbot-small-xl @ FP8
+Model: diffbot-small-xl
 ```bash
 docker run --runtime nvidia --gpus all -p 8001:8001 --ipc=host -e VLLM_OPTIONS="--model diffbot/Llama-3.3-Diffbot-Small-XL-2412 --served-model-name diffbot-small-xl --enable-prefix-caching --quantization fp8 --tensor-parallel-size 2"  docker.io/diffbot/diffbot-llm-inference:latest 
 ```
 
-You can now use the endpoint `http://localhost:8001/rag/v1`. It works exactly like the Serverless API below.
+The Diffbot server leverages vLLM to serve the model, and it is ready to receive requests once vLLM outputs the following message:
+```
+INFO:  Application startup complete.
+INFO:  Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+```
+
+You can now use the endpoint `http://localhost:8001/rag/v1`, which works exactly like the Serverless API below.
 
 ## 7. Using the Serverless API
 
