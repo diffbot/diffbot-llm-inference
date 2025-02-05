@@ -82,6 +82,14 @@ Below shows the MMLU-Pro scores of diffbot-small and diffbot-small-xl over the b
 
 Note: This is a measurement of the Diffbot GraphRAG LLM API end-to-end, not a measure of the knowledge contained in the weights. The lift in its performance over the base model comes from its ability to access external tools.
 
+### SimpleQA
+
+![SimpleQA benchmark evals across several models](./static/simpleqa.png)
+
+[SimpleQA](https://openai.com/index/introducing-simpleqa/) is OpenAI's factuality benchmark focused on short, fact-seeking queries. It contains over 4000 questions covering science and technology to TV shows and video games.
+
+Diffbot's 70b model outperforms every other evaluated model to date, including internet connected models like Perplexity Sonar Pro and Gemini-2.0-flash. We attribute this performance to its deep-rooted training to distrust its own knowledge.
+
 
 ## 5. Demo
 
