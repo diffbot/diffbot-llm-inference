@@ -127,6 +127,8 @@ You can now use the endpoint `http://localhost:8001/rag/v1`, which works exactly
 
 ## 7. Using the Serverless API
 
+You can also access the Diffbot LLM on the servless API below. The serverless API follows a Zero Data Retention policy. User data is not stored or retained after it has been processed.
+
 Get a free Diffbot developer token at https://app.diffbot.com/get-started
 
 ```python
