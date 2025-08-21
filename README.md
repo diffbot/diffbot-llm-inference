@@ -50,8 +50,8 @@ Diffbot LLM is an expert maker of ASCII-art weather forecasts, grounded in real 
 ## 3. Model Download
 
 Available on HuggingFace at:
- * diffbot-small (8b Llama 3.1 fine tune): https://huggingface.co/diffbot/Llama-3.1-Diffbot-Small-2412
- * diffbot-small-xl (70b Llama 3.3 fine tune): https://huggingface.co/diffbot/Llama-3.3-Diffbot-Small-XL-2412
+ * diffbot-small: https://huggingface.co/diffbot/Llama-3.1-Diffbot-Small-2504
+ * diffbot-small-xl: https://huggingface.co/diffbot/Diffbot-Small-XL-2505
 
 ## 4. Accuracy Benchmarks
 
